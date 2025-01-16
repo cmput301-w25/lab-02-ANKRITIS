@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_button"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_marginTop="16dp"
+        android:paddingTop="72dp"
+        />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:textSize="20sp"
+        android:onClick="addCity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        android:layout_margin="16dp" android:layout_marginEnd="8dp"/>
+
+    <Button
+
+        android:id="@+id/delete_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:textSize="20sp"
+        android:onClick="deleteSelectedCity"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" android:layout_marginEnd="8dp"
+        tools:ignore="HardcodedText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
